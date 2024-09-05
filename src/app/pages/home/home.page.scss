@@ -1,0 +1,55 @@
+ion-content {
+  --background: #FFD700; /* Amarillo */
+  background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 10px 10px; /* Tamaño de los puntos */
+  overflow: hidden;
+}
+
+.botones-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre los botones */
+  padding: 20px;
+  flex-wrap: wrap; /* Permitir que los botones se envuelvan en modo horizontal */
+}
+
+.imagen-boton {
+  width: 150px; /* Tamaño de los botones */
+  height: 150px;
+  border-radius: 50%;
+  --background: rgba(0, 0, 0, 0.5);
+}
+
+.imagen-boton:hover {
+  transform: scale(1.1);
+}
+
+.numeros-container .imagen-boton {
+  width: 123px; /* Tamaño específico para los botones de números */
+  height: 108px;
+}
+
+/* Estilos específicos para orientación horizontal */
+.landscape .botones-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.landscape .imagen-boton {
+  width: 150px; /* Reducimos el tamaño de los botones en modo horizontal */
+  height: 150px;
+}
+.landscape .imagen-boton-number {
+  width: 128px; /* Reducimos el tamaño de los botones en modo horizontal */
+  height: 128px;
+  border-radius: 50%;
+  --background: rgba(0, 0, 0, 0.5);
+}
+
+.landscape .numeros-container .imagen-boton {
+  gap: 10px; /* Espacio entre los botones */
+  padding: 20px;
+
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pruebapp-yober": {
+      "hosting": {
+        "app": [
+          "pruebapp-yober"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pruebapp-yober"
+  }
+}

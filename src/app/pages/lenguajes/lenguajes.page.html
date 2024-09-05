@@ -1,0 +1,16 @@
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <img [src]="'assets/images/' + idiomaActual + '.png'" [alt]="idiomaActual.toUpperCase()">
+  </ion-fab-button>
+  <ion-fab-list side="bottom">
+    <ion-fab-button (click)="seleccionarIdioma('es')">
+      <img src="assets/images/es.png" alt="Español">
+    </ion-fab-button>
+    <ion-fab-button (click)="seleccionarIdioma('en')">
+      <img src="assets/images/en.png" alt="Inglés">
+    </ion-fab-button>
+    <ion-fab-button (click)="seleccionarIdioma('pt')">
+      <img src="assets/images/pt.png" alt="Portugués">
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>

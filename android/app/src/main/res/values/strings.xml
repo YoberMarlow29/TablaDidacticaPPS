@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tabla Didáctica</string>
+    <string name="title_activity_main">Tabla Didáctica</string>
+    <string name="package_name">io.yobm.starter</string>
+    <string name="custom_url_scheme">io.yobm.starter</string>
+</resources>

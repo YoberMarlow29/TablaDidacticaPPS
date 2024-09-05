@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'tablaDidactica',
+  appId: 'io.yobm.starter',
+  appName: 'Tabla Didáctica',
   webDir: 'www'
 };
 

@@ -1,0 +1,235 @@
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="btnSalir()">
+    <ion-img src="assets/images/exportar.png"></ion-img>
+  </ion-fab-button>
+</ion-fab>
+<ion-content scroll-y="false">
+  <app-lenguajes (idiomaSeleccionado)="onIdiomaSeleccionado($event)"></app-lenguajes>
+  <app-seleccion-temas (temaSeleccionado)="onTemaSeleccionado($event)"></app-seleccion-temas>
+                <!--
+                    HORIENTAZION
+                    VERTICAL -->
+
+<ng-container *ngIf="orientation === 'portrait'">
+      <!-- COLORES     -->
+  <ng-container *ngIf="temaSeleccionado === 'colores'">
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('rojo')">
+            <img src="assets/imgColores/rojo.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('amarillo')">
+            <img src="assets/imgColores/amarillo.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('azul')">
+            <img src="assets/imgColores/azul.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('verde')">
+            <img src="assets/imgColores/verde.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('violeta')">
+            <img src="assets/imgColores/violeta.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('naranja')">
+            <img src="assets/imgColores/naranja.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('blanco')">
+            <img src="assets/imgColores/blanco.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('negro')">
+            <img src="assets/imgColores/negro.png" alt="">
+          </ion-button>
+        </div>
+      </ng-container>
+      <!-- NUMEROS -->
+      <ng-container *ngIf="temaSeleccionado === 'numeros'">
+        <div class="botones-container numeros-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('0')">
+            <img src="assets/imgNumeros/0.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('1')">
+            <img src="assets/imgNumeros/1.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container numeros-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('2')">
+            <img src="assets/imgNumeros/2.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('3')">
+            <img src="assets/imgNumeros/3.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container numeros-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('4')">
+            <img src="assets/imgNumeros/4.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('5')">
+            <img src="assets/imgNumeros/5.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container numeros-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('6')">
+            <img src="assets/imgNumeros/6.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('7')">
+            <img src="assets/imgNumeros/7.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container numeros-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('8')">
+            <img src="assets/imgNumeros/8.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('9')">
+            <img src="assets/imgNumeros/9.png" alt="">
+          </ion-button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="temaSeleccionado === 'animales'">
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('jirafa')">
+            <img src="assets/imgAnimales/jirafa.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('elefante')">
+            <img src="assets/imgAnimales/elefante.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('tucan')">
+            <img src="assets/imgAnimales/tucan.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('gallina')">
+            <img src="assets/imgAnimales/gallina.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('leon')">
+            <img src="assets/imgAnimales/leon.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('chancho')">
+            <img src="assets/imgAnimales/chancho.png" alt="">
+          </ion-button>
+        </div>
+        <div class="botones-container">
+          <ion-button class="imagen-boton" (click)="reproducirAudio('cebra')">
+            <img src="assets/imgAnimales/cebra.png" alt="">
+          </ion-button>
+          <ion-button class="imagen-boton" (click)="reproducirAudio('mono')">
+            <img src="assets/imgAnimales/mono.png" alt="">
+          </ion-button>
+        </div>
+      </ng-container>
+  </ng-container>
+
+        <!-- HORIENTAZION
+        HORIZONTAL -->
+
+  <ng-container *ngIf="orientation === 'landscape'">
+
+    <ng-container *ngIf="temaSeleccionado === 'colores'">
+      <div class="botones-container landscape">
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('rojo')">
+          <img src="assets/imgColores/rojo.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('amarillo')">
+          <img src="assets/imgColores/amarillo.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('azul')">
+          <img src="assets/imgColores/azul.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('verde')">
+          <img src="assets/imgColores/verde.png" alt="">
+        </ion-button>
+      </div>
+
+      <div class="botones-container landscape">
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('violeta')">
+          <img src="assets/imgColores/violeta.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('naranja')">
+          <img src="assets/imgColores/naranja.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('blanco')">
+          <img src="assets/imgColores/blanco.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('negro')">
+          <img src="assets/imgColores/negro.png" alt="">
+        </ion-button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="temaSeleccionado === 'numeros'">
+      <div class="botones-container landscape numeros-container">
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('0')">
+          <img src="assets/imgNumeros/0.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('1')">
+          <img src="assets/imgNumeros/1.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('2')">
+          <img src="assets/imgNumeros/2.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('3')">
+          <img src="assets/imgNumeros/3.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('4')">
+          <img src="assets/imgNumeros/4.png" alt="">
+        </ion-button>
+      </div>
+
+      <div class="botones-container landscape numeros-container">
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('5')">
+          <img src="assets/imgNumeros/5.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('6')">
+          <img src="assets/imgNumeros/6.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('7')">
+          <img src="assets/imgNumeros/7.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('8')">
+          <img src="assets/imgNumeros/8.png" alt="">
+        </ion-button>
+        <ion-button class="landscape imagen-boton-number" (click)="reproducirAudio('9')">
+          <img src="assets/imgNumeros/9.png" alt="">
+        </ion-button>
+      </div>
+
+    </ng-container>
+    <ng-container *ngIf="temaSeleccionado === 'animales'">
+      <div class="botones-container landscape">
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('jirafa')">
+          <img src="assets/imgAnimales/jirafa.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('elefante')">
+          <img src="assets/imgAnimales/elefante.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape"  (click)="reproducirAudio('tucan')">
+          <img src="assets/imgAnimales/tucan.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('gallina')">
+          <img src="assets/imgAnimales/gallina.png" alt="">
+        </ion-button>
+      </div>
+
+      <div class="botones-container landscape">
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('leon')">
+          <img src="assets/imgAnimales/leon.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('chancho')">
+          <img src="assets/imgAnimales/chancho.png" alt="">
+        </ion-button>
+                <ion-button class="imagen-boton landscape" (click)="reproducirAudio('cebra')">
+          <img src="assets/imgAnimales/cebra.png" alt="">
+        </ion-button>
+        <ion-button class="imagen-boton landscape" (click)="reproducirAudio('mono')">
+          <img src="assets/imgAnimales/mono.png" alt="">
+        </ion-button>
+      </div>
+
+        </ng-container>
+  </ng-container>
+</ion-content>

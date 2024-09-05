@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tabla Didáctica</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content scroll-y="false">
+  <div class="container">
+    <img src="/assets/images/zoologia.png" class="logo" />
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="noFoto">
+
+      <form>
+        <ion-item class="items">
+          <ion-label position="floating" style="color: #8B4513">
+            <ion-text color="light">Contraseña</ion-text>
+          </ion-label>
+          <ion-input
+            color="light"
+            [(ngModel)]="password"
+            name="clave"
+            type="password"
+            required
+          ></ion-input>
+        </ion-item>
+        <hr>
+        <hr>
+        <hr>
+        <ion-item class="items">
+          <ion-label position="floating" style="color: #8B4513">Correo Electrónico</ion-label>
+          <ion-input
+            style="color: #8B4513;"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" type="submit" class="botones" (click)="btnLogin()">
+          <ion-text color="#8B4513">Iniciar sesión</ion-text>
+        </ion-button>
+      </form>
+      <hr>
+      <hr>
+      <hr>
+      <div class="containerCheckboxes">
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12" class="checkbox-item">
+              <ion-item lines="none">
+                <ion-label>Administrador</ion-label>
+                <label class="switch">
+                  <input type="checkbox" (change)="toggleCheckbox($event)" (click)="btnUsuarioUno()">
+                  <span class="slider round"></span>
+                </label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="checkbox-item">
+              <ion-item lines="none">
+                <ion-label>Invitado</ion-label>
+                <label class="switch">
+                  <input type="checkbox" (change)="toggleCheckbox($event)" (click)="btnUsuarioDos()">
+                  <span class="slider round"></span>
+                </label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="checkbox-item">
+              <ion-item lines="none">
+                <ion-label>Usuario</ion-label>
+                <label class="switch">
+                  <input type="checkbox" (change)="toggleCheckbox($event)" (click)="btnUsuarioTres()">
+                  <span class="slider round"></span>
+                </label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

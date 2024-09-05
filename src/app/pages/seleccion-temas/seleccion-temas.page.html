@@ -1,0 +1,16 @@
+<ion-fab vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab-button>
+    <img [src]="'assets/images/' + temaActual + '.png'" [alt]="temaActual">
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button (click)="seleccionarTema('colores')">
+      <img src="assets/images/colores.png" alt="Colores">
+    </ion-fab-button>
+    <ion-fab-button (click)="seleccionarTema('numeros')">
+      <img src="assets/images/numeros.png" alt="Números">
+    </ion-fab-button>
+    <ion-fab-button (click)="seleccionarTema('animales')">
+      <img src="assets/images/animales.png" alt="Animales">
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
